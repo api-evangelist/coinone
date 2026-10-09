@@ -1,23 +1,71 @@
 aid: coinone
+
 name: Coinone
-description: 'Coinone is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Coinone (코인원) is a South Korean cryptocurrency exchange offering trading of Bitcoin, Ethereum, and other digital assets. It provides a user-friendly platform with features such as staking, smart trading, and a public Open API for developers. The exchange emphasizes security, fast transaction processing, and a range of services including fiat deposits, withdrawals, and market insights.'
+
 url: https://raw.githubusercontent.com/api-evangelist/coinone/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-09 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-09'
+
 modified: '2026-10-09'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: security/coinone-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/coinone-llms.txt
+- type: Hosts
+  url: hosts/coinone-hosts.yml
+- type: Vendors
+  url: vendors/coinone-vendors.yml
+- type: SDKs
+  url: packages/coinone-packages.yml
+- type: Packages
+  url: packages/coinone-packages.yml
+- type: VulnerabilityDisclosure
+  url: security/coinone-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/coinone-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://coinone.co.kr/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  method: derived
+  generated: '2026-10-09'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company's own front door answers a browser with an anti-bot challenge, so nothing behind it is reachable by any reader
+  evidence:
+  - url: https://coinone.co.kr/
+    status: 403
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-09'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

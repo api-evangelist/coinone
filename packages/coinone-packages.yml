@@ -1,0 +1,23 @@
+generated: '2026-10-09'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (coinone.co.kr,
+  security/coinone-domain-security.yml, security/coinone-vulnerability-disclosure.yml) or its accepted GitHub org.'
+packages:
+- name: coinone
+  registry: npm
+  url: https://www.npmjs.com/package/coinone
+  language: JavaScript
+  official: true
+  version: 1.0.1
+  published: '2016-11-26'
+  evidence: metadata names coinone.co.kr
+- name: coinone
+  registry: rubygems
+  url: https://rubygems.org/gems/coinone
+  language: Ruby
+  official: true
+  version: 0.9.0
+  published: '2019-08-30'
+  evidence: metadata names coinone.co.kr
