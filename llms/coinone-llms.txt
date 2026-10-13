@@ -1,0 +1,76 @@
+# 코인원 개발자 센터 Documentation
+
+> 다양한 서비스를 개발할 수 있도록 Open API 사용을 위한 문서를 제공합니다.
+
+## 이용 안내: API 이용 안내
+- [API 소개 및 요청방법](https://docs.coinone.co.kr/docs/about-public-api.md): Public API와 Private API를 요청하는 방법과 제한 사항을 확인
+- [API 요청건수 제한 안내](https://docs.coinone.co.kr/docs/ratelimit-안내.md)
+- [API 에러코드](https://docs.coinone.co.kr/docs/error-code.md)
+
+## 이용 안내: API 수수료 안내
+- [API 거래 수수료율 안내](https://docs.coinone.co.kr/docs/api-거래-수수료율-안내.md)
+
+## API 레퍼런스: PUBLIC API V2
+- [개별 호가 단위 조회](https://docs.coinone.co.kr/reference/range-unit.md): 개별 종목의 가격 단위 별 호가 단위 조회
+- [전체 종목 정보 조회](https://docs.coinone.co.kr/reference/markets.md): 마켓 별로 거래 가능한 종목들의 정보 조회
+- [개별 종목 정보 조회](https://docs.coinone.co.kr/reference/market.md): 마켓 별로 거래 가능한 개별 종목의 정보 조회
+- [오더북 조회](https://docs.coinone.co.kr/reference/orderbook.md): 특정 종목의 오더북 정보 조회 (호가 단위 별)
+- [최근 체결 주문 조회](https://docs.coinone.co.kr/reference/recent-completed-orders.md): 최신 순으로 체결된 주문 목록 조회
+- [전체 티커 정보 조회](https://docs.coinone.co.kr/reference/tickers.md): 마켓의 모든 티커 정보 조회
+- [개별 티커 정보 조회](https://docs.coinone.co.kr/reference/ticker.md): 특정 종목의 티커 정보 조회
+- [전체 티커 정보 조회 (UTC)](https://docs.coinone.co.kr/reference/utc-tickers.md): UTC 기준으로 마켓의 모든 티커 정보 조회
+- [개별 티커 정보 조회 (UTC)](https://docs.coinone.co.kr/reference/utc-ticker.md): UTC 기준으로 특정 종목의 티커 정보 조회
+- [전체 가상자산 정보 조회](https://docs.coinone.co.kr/reference/currencies.md): 마켓 별 종목들의 정보 조회 (심볼 정보, 입/출금 가능여부, 입/출금 수수료, 최소 출금 가능 금액 등)
+- [개별 가상자산 정보 조회](https://docs.coinone.co.kr/reference/currency.md): 특정 종목의 정보 조회 (심볼 정보, 입/출금 가능여부, 입/출금 수수료, 최소 출금 가능 금액 등)
+- [캔들 차트 조회](https://docs.coinone.co.kr/reference/chart.md): 특정 종목의 캔들 차트 조회
+
+## API 레퍼런스: PRIVATE API V2.1
+- [전체 잔고 조회](https://docs.coinone.co.kr/reference/find-balance.md): 고객이 보유한 전체 잔고 조회
+- [특정 자산 잔고 조회](https://docs.coinone.co.kr/reference/find-balance-by-currencies.md): 고객이 보유한 특정 종목의 잔고 조회
+- [전체 수수료 조회](https://docs.coinone.co.kr/reference/find-all-trade-fees.md): 거래 가능한 모든 종목의 수수료 조회
+- [개별 종목 수수료 조회](https://docs.coinone.co.kr/reference/find-trade-fee-by-pair.md): 개별 종목 별로 수수료 조회
+- [가상자산 입금 주소 조회](https://docs.coinone.co.kr/reference/virtual-asset-deposit-address.md): 입금가능한 가상자산의 입금주소 조회
+- [미체결 주문 조회](https://docs.coinone.co.kr/reference/find-active-orders.md): 종목 별 / 주문 방식 별로 미체결 주문 조회
+- [주문 정보 조회](https://docs.coinone.co.kr/reference/order-detail.md): 주문 식별 ID에 해당하는 주문 조회
+- [전체 체결 주문 조회](https://docs.coinone.co.kr/reference/find-all-completed-orders.md): 체결된 모든 주문 조회
+- [종목 별 체결 주문 조회](https://docs.coinone.co.kr/reference/find-completed-orders.md): 특정 종목의 체결된 주문 조회
+- [전체 미체결 주문 조회](https://docs.coinone.co.kr/reference/find-all-open-orders.md): 고객에게 걸려있는 모든 미체결 주문 조회
+- [종목 별 미체결 주문 조회](https://docs.coinone.co.kr/reference/find-open-orders.md): 특정 종목에 걸려있는 모든 미체결 주문을 조회
+- [특정 주문 정보 조회](https://docs.coinone.co.kr/reference/find-order-info.md): 주문 식별 ID에 해당되는 주문 정보 조회
+- [매수/매도 주문](https://docs.coinone.co.kr/reference/place-order.md): 시장가, 지정가, 예약가 주문 유형으로 매수/매도 주문 등록
+- [종목 별 전체 주문 취소](https://docs.coinone.co.kr/reference/cancel-orders.md): 특정 종목에 걸려있는 전체 주문의 취소
+- [개별 주문 취소](https://docs.coinone.co.kr/reference/cancel-order.md): 주문 식별 ID로 원하는 주문의 취소
+- [지정가 매매 주문](https://docs.coinone.co.kr/reference/order-place-limit-order.md): 지정가 방식으로 매수/매도 주문 등록
+- [원화 입출금 내역 조회](https://docs.coinone.co.kr/reference/krw-transaction-history.md): 원화의 전체 입출금 내역 조회
+- [가상자산 입출금 내역 조회](https://docs.coinone.co.kr/reference/coin-transaction-history.md): 가상자산의 전체 입출금 내역 조회
+- [가상자산 입출금 내역 단건 조회](https://docs.coinone.co.kr/reference/single-coin-transaction-history.md): 출금 API를 통해 받은 ID를 이용하여 가상자산의 입출금 내역의 진행상태를 조회할 수 있습니다.
+- [가상자산 출금 한도 조회](https://docs.coinone.co.kr/reference/coin-withdrawal-limit.md): 가상자산의 전일 종가를 기준으로 출금 가능 한도를 조회
+- [출금 주소 목록 조회](https://docs.coinone.co.kr/reference/coin-withdrawal-address-book.md): 2차 인증 및 수취인정보 등록이 완료된 주소 조회. (해당 주소로만 API출금이 가능합니다)
+- [가상자산 출금](https://docs.coinone.co.kr/reference/coin-withdrawal.md): 2차 인증 및 수취인정보 입력이 완료된 주소에 대해 API를 이용한 출금을 요청합니다.
+- [주문 리워드 이벤트](https://docs.coinone.co.kr/reference/order-reward-event.md)
+  - [주문 리워드 종목 정보 조회](https://docs.coinone.co.kr/reference/order-reward-programs.md): 진행중인 주문 리워드 프로그램에 대한 정보 조회
+  - [주문 리워드 내역 조회](https://docs.coinone.co.kr/reference/order-reward-history.md): 수령한 리워드 내역 정보 조회 (최근일부터 역순 조회, 기간내 최대 30일치 조회 가능)
+
+## API 레퍼런스: Websocket
+- [Public 웹소켓](https://docs.coinone.co.kr/reference/public-websocket-1.md): Public 웹소켓 이용 안내
+  - [커넥션 관리 (PING)](https://docs.coinone.co.kr/reference/public-websocket-ping.md): 연결 상태를 체크하고, 세션 만료시간을 갱신
+  - [오더북 응답 (ORDERBOOK)](https://docs.coinone.co.kr/reference/public-websocket-orderbook.md): 거래쌍의 오더북 모니터링
+  - [티커 응답 (TICKER)](https://docs.coinone.co.kr/reference/public-websocket-ticker.md): 금일과 전일의 시가,고가,종가,저가 정보에 대한 모니터링
+  - [체결정보 응답 (TRADE)](https://docs.coinone.co.kr/reference/public-websocket-trade.md): 특정 종목의 체결 정보 모니터링
+  - [차트 응답 (CHART)](https://docs.coinone.co.kr/reference/public-websocket-chart.md): 차트 변동 정보 모니터링
+- [Private 웹소켓](https://docs.coinone.co.kr/reference/private-websocket-1.md): Private 웹소켓 이용 안내
+  - [커넥션 관리 (PING)](https://docs.coinone.co.kr/reference/private-websocket-1-ping.md): 연결 상태를 체크하고, 세션 만료시간을 갱신
+  - [내 주문 변동 (MYORDER)](https://docs.coinone.co.kr/reference/private-websocket-1-myorder.md): 내 주문의 생성, 체결, 취소를 모니터링
+  - [내 자산 변동 (MYASSET)](https://docs.coinone.co.kr/reference/private-websocket-1-myasset.md): 내 잔고변동을 모니터링
+
+## 변경 내역
+- [Open API 보안 정책 변경 안내](https://docs.coinone.co.kr/changelog/open-api-보안-정책-변경-안내.md)
+- [Public 웹소켓 차트 응답 지원 안내](https://docs.coinone.co.kr/changelog/public-웹소켓-차트-응답지원안내.md)
+- [Private 웹소켓 지원 안내](https://docs.coinone.co.kr/changelog/private-웹소켓-지원-안내.md)
+- [주문 리워드 이벤트 API 추가 안내 (v.1.7.0)](https://docs.coinone.co.kr/changelog/주문-리워드-이벤트-api-추가-안내-v170.md)
+- [호가 단위 조회 API 제거 및 신규 추가 안내 (v.1.6.0)](https://docs.coinone.co.kr/changelog/호가-단위-조회-api-제거-및-신규-추가-안내.md)
+- [(중요) API 요청 횟수 정책변경 및 상향안내](https://docs.coinone.co.kr/changelog/중요-초당-요청-횟수-정책변경-및-상향안내.md)
+- [출금 API 지원 안내 (v.1.4.0)](https://docs.coinone.co.kr/changelog/출금-api-지원-안내-v140.md)
+- [포트폴리오 기능 신규 지원](https://docs.coinone.co.kr/changelog/포트폴리오-기능-신규-지원.md)
+- [Private 2.0 부분취소 기능 삭제 (v.1.3.0)](https://docs.coinone.co.kr/changelog/240111-changelog.md)
+- [Public 웹소켓 지원 안내 (v1.3.0)](https://docs.coinone.co.kr/changelog/public-websocket-제공-안내.md)

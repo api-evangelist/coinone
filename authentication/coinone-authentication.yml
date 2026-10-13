@@ -1,0 +1,22 @@
+name: Coinone API Authentication
+generated: '2026-10-13'
+method: searched
+source: https://docs.coinone.co.kr/reference/find-trade-fee-by-pair
+docs: https://docs.coinone.co.kr/docs/about-public-api
+schemes:
+- name: coinone-hmac-signature
+  type: apiKey
+  in: header
+  headers:
+    X-COINONE-PAYLOAD: Request body object -> JSON string -> base64
+    X-COINONE-SIGNATURE: HMAC(X-COINONE-PAYLOAD, SECRET_KEY, SHA512).hexdigest()
+  body_fields:
+  - access_token
+  - nonce
+  applies_to: Private API V2.1 (POST /v2.1/*)
+  note: nonce is a UUID; access_token is the issued API access token
+- name: none
+  type: none
+  applies_to: Public API V2 (GET /public/v2/*)
+note: The ReadMe-served OpenAPI slices declare no securitySchemes; this profile is
+  read from the reference pages.

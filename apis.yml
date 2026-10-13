@@ -1,23 +1,112 @@
 aid: coinone
 name: Coinone
-description: 'Coinone is a company surfaced via the API Evangelist harvest backlog (source: market-gap:crypto-exchanges)
-  and added to the network as a stub for full-pipeline profiling.'
+description: Coinone (코인원) is a South Korean cryptocurrency exchange. Its Open API
+  (docs.coinone.co.kr) offers a Public API V2 for market data (markets, tickers, orderbooks,
+  trades, charts, currencies) and a signed Private API V2.1 for account balances,
+  orders, and deposits/withdrawals, plus public and private WebSocket streams.
 url: https://raw.githubusercontent.com/api-evangelist/coinone/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:crypto-exchanges
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Exchange
+- Trading
+- Market Data
+- South Korea
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/coinone-agentic-access.yml
+- type: Spectral
+  url: rules/coinone-rules.yml
+- type: Security
+  url: security/coinone-vulnerability-disclosure.yml
+- type: Conformance
+  url: conformance/coinone-conformance.yml
+- type: Hosts
+  url: hosts/coinone-hosts.yml
+- type: Vendors
+  url: vendors/coinone-vendors.yml
+- type: SDKs
+  url: packages/coinone-packages.yml
+- type: Packages
+  url: packages/coinone-packages.yml
+- type: VulnerabilityDisclosure
+  url: security/coinone-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/coinone-domain-security.yml
 - type: Website
   url: https://coinone.co.kr
+- type: Documentation
+  url: https://docs.coinone.co.kr
+- type: APIReference
+  url: https://docs.coinone.co.kr/reference
+- type: ChangeLog
+  url: https://docs.coinone.co.kr/changelog
+- type: RateLimits
+  url: https://docs.coinone.co.kr/docs/ratelimit-안내
+- type: Pricing
+  url: https://docs.coinone.co.kr/docs/api-거래-수수료율-안내
+- type: ErrorCodes
+  url: https://docs.coinone.co.kr/docs/error-code
+- type: LLMsTxt
+  url: llms/coinone-llms.txt
+- type: ErrorCatalog
+  url: errors/coinone-error-codes.yml
+- type: RateLimits
+  url: rate-limits/coinone-rate-limits.yml
+- type: ChangeLog
+  url: changelog/coinone-changelog.yml
+- type: Authentication
+  url: authentication/coinone-authentication.yml
+- type: Plans
+  url: plans/coinone-plans-pricing.yml
+apis:
+- aid: coinone:coinone-public-api
+  name: Coinone Public API
+  description: 'Unauthenticated Public API V2 market data: markets, range units, tickers,
+    orderbooks, recent trades, charts and currencies. Public WebSocket stream at wss://stream.coinone.co.kr.'
+  humanURL: https://docs.coinone.co.kr/reference
+  baseURL: https://api.coinone.co.kr
+  tags:
+  - Market Data
+  - Cryptocurrency
+  properties:
+  - type: OpenAPI
+    url: openapi/coinone-public-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinone.co.kr/docs/about-public-api
+  - type: APIReference
+    url: https://docs.coinone.co.kr/reference
+- aid: coinone:coinone-private-api
+  name: Coinone Private API
+  description: Signed Private API V2.1 (X-COINONE-PAYLOAD / X-COINONE-SIGNATURE HMAC-SHA512)
+    for balances, trade fees, order placement and cancellation, order history, KRW
+    and coin transactions, withdrawals and deposit addresses. Private WebSocket stream
+    at wss://stream.coinone.co.kr/v1/private.
+  humanURL: https://docs.coinone.co.kr/reference
+  baseURL: https://api.coinone.co.kr
+  tags:
+  - Trading
+  - Orders
+  - Wallets
+  properties:
+  - type: OpenAPI
+    url: openapi/coinone-private-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinone.co.kr/docs/about-public-api
+  - type: APIReference
+    url: https://docs.coinone.co.kr/reference
+x-enrichment:
+  status: enriched
+  pass: local-v5
+  date: '2026-10-13'

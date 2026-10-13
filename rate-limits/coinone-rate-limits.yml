@@ -1,0 +1,29 @@
+name: Coinone API Rate Limits
+generated: '2026-10-13'
+method: searched
+source: https://docs.coinone.co.kr/docs/ratelimit-안내
+limits:
+- name: Public API V2
+  window: 1 minute
+  max: 1200
+  scope: per request IP
+- name: Public API V1
+  window: 1 minute
+  max: 600
+  scope: per request IP
+- name: Private API V2.1 order APIs
+  window: 1 second
+  max: 40
+  scope: per portfolio
+- name: Private API V2.1 other APIs
+  window: 1 second
+  max: 80
+  scope: per portfolio
+- name: Private API V2 order APIs
+  window: 1 second
+  max: 40
+  scope: per portfolio
+- name: Private API V2 other APIs
+  window: 1 second
+  max: 40
+  scope: per portfolio

@@ -1,0 +1,50 @@
+name: Coinone Open API Changelog
+generated: '2026-10-13'
+method: searched
+source: https://docs.coinone.co.kr/changelog
+scheme: semver (v.1.x.0 release notes)
+current_version: '1.7'
+entries:
+- date: '2026-08-05'
+  breaking: false
+  highlights:
+  - Open API 보안 정책 변경 안내
+  date_note: effective date stated in the notice text
+- breaking: false
+  highlights:
+  - Public 웹소켓 차트 응답 지원 안내
+- breaking: false
+  highlights:
+  - Private 웹소켓 지원 안내
+- version: 1.7.0
+  breaking: false
+  highlights:
+  - 주문 리워드 이벤트 API 추가 안내 (v.1.7.0)
+- version: 1.6.0
+  date: '2024-12-19'
+  breaking: true
+  highlights:
+  - 호가 단위 조회 API 제거 및 신규 추가 안내 (v.1.6.0)
+  date_note: effective date stated in the notice text
+- breaking: false
+  highlights:
+  - (중요) API 요청 횟수 정책변경 및 상향안내
+- version: 1.4.0
+  breaking: false
+  highlights:
+  - 출금 API 지원 안내 (v.1.4.0)
+- breaking: false
+  highlights:
+  - 포트폴리오 기능 신규 지원
+- version: 1.3.0
+  date: '2024-01-18'
+  breaking: true
+  highlights:
+  - Private 2.0 부분취소 기능 삭제 (v.1.3.0)
+  date_note: effective date stated in the notice text
+- version: 1.3.0
+  breaking: false
+  highlights:
+  - Public 웹소켓 지원 안내 (v1.3.0)
+note: Notice pages carry no publication timestamp; dates are only the effective dates
+  stated in the notice text.

@@ -1,0 +1,194 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/coinone-private-api-openapi.yml
+- openapi/coinone-public-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.co.kr, coinone.co.kr; verdict absent. Candidate tools below are
+  derived from the 36 operation(s) in the provider's own OpenAPI (36 listed); they describe what a server WOULD expose, not one that exists.
+tools:
+- name: cancel_order
+  operationId: cancel-order
+  method: POST
+  path: /v2.1/order/cancel
+  description: 개별 주문 취소
+- name: chart
+  operationId: chart
+  method: GET
+  path: /public/v2/chart/{quote_currency}/{target_currency}
+  description: 캔들 차트 조회
+- name: cancel_orders
+  operationId: cancel-orders
+  method: POST
+  path: /v2.1/order/cancel/all
+  description: 종목 별 전체 주문 취소
+- name: currencies
+  operationId: currencies
+  method: GET
+  path: /public/v2/currencies
+  description: 전체 가상자산 정보 조회
+- name: coin_transaction_history
+  operationId: coin-transaction-history
+  method: POST
+  path: /v2.1/transaction/coin/history
+  description: 가상자산 입출금 내역 조회
+- name: currency
+  operationId: currency
+  method: GET
+  path: /public/v2/currencies/{currency}
+  description: 개별 가상자산 정보 조회
+- name: coin_withdrawal_address_book
+  operationId: coin-withdrawal-address-book
+  method: POST
+  path: /v2.1/transaction/coin/withdrawal/address_book
+  description: 출금 주소 목록 조회
+- name: market
+  operationId: market
+  method: GET
+  path: /public/v2/markets/{quote_currency}/{target_currency}
+  description: 개별 종목 정보 조회
+- name: coin_withdrawal_limit
+  operationId: coin-withdrawal-limit
+  method: POST
+  path: /v2.1/transaction/coin/withdrawal/limit
+  description: 가상자산 출금 한도 조회
+- name: markets
+  operationId: markets
+  method: GET
+  path: /public/v2/markets/{quote_currency}
+  description: 전체 종목 정보 조회
+- name: coin_withdrawal
+  operationId: coin-withdrawal
+  method: POST
+  path: /v2.1/transaction/coin/withdrawal
+  description: 가상자산 출금
+- name: orderbook
+  operationId: orderbook
+  method: GET
+  path: /public/v2/orderbook/{quote_currency}/{target_currency}
+  description: 오더북 조회
+- name: find_active_orders
+  operationId: find-active-orders
+  method: POST
+  path: /v2.1/order/active_orders
+  description: 미체결 주문 조회
+- name: range_unit
+  operationId: range-unit
+  method: GET
+  path: /public/v2/range_units/{quote_currency}/{target_currency}
+  description: 개별 호가 단위 조회
+- name: find_all_completed_orders
+  operationId: find-all-completed-orders
+  method: POST
+  path: /v2.1/order/completed_orders/all
+  description: 전체 체결 주문 조회
+- name: recent_completed_orders
+  operationId: recent-completed-orders
+  method: GET
+  path: /public/v2/trades/{quote_currency}/{target_currency}
+  description: 최근 체결 주문 조회
+- name: find_all_open_orders
+  operationId: find-all-open-orders
+  method: POST
+  path: /v2.1/order/open_orders/all
+  description: 전체 미체결 주문 조회
+- name: ticker
+  operationId: ticker
+  method: GET
+  path: /public/v2/ticker_new/{quote_currency}/{target_currency}
+  description: 개별 티커 정보 조회
+- name: find_all_trade_fees
+  operationId: find-all-trade-fees
+  method: POST
+  path: /v2.1/account/trade_fee
+  description: 전체 수수료 조회
+- name: tickers
+  operationId: tickers
+  method: GET
+  path: /public/v2/ticker_new/{quote_currency}
+  description: 전체 티커 정보 조회
+- name: find_balance_by_currencies
+  operationId: find-balance-by-currencies
+  method: POST
+  path: /v2.1/account/balance
+  description: 특정 자산 잔고 조회
+- name: utc_ticker
+  operationId: utc-ticker
+  method: GET
+  path: /public/v2/ticker_utc_new/{quote_currency}/{target_currency}
+  description: 개별 티커 정보 조회 (UTC)
+- name: find_balance
+  operationId: find-balance
+  method: POST
+  path: /v2.1/account/balance/all
+  description: 전체 잔고 조회
+- name: utc_tickers
+  operationId: utc-tickers
+  method: GET
+  path: /public/v2/ticker_utc_new/{quote_currency}
+  description: 전체 티커 정보 조회 (UTC)
+- name: find_completed_orders
+  operationId: find-completed-orders
+  method: POST
+  path: /v2.1/order/completed_orders
+  description: 종목 별 체결 주문 조회
+- name: find_open_orders
+  operationId: find-open-orders
+  method: POST
+  path: /v2.1/order/open_orders
+  description: 종목 별 미체결 주문 조회
+- name: find_order_info
+  operationId: find-order-info
+  method: POST
+  path: /v2.1/order/info
+  description: 특정 주문 정보 조회
+- name: find_trade_fee_by_pair
+  operationId: find-trade-fee-by-pair
+  method: POST
+  path: /v2.1/account/trade_fee/{quote_currency}/{target_currency}
+  description: 개별 종목 수수료 조회
+- name: krw_transaction_history
+  operationId: krw-transaction-history
+  method: POST
+  path: /v2.1/transaction/krw/history
+  description: 원화 입출금 내역 조회
+- name: order_detail
+  operationId: order-detail
+  method: POST
+  path: /v2.1/order/detail
+  description: 주문 정보 조회
+- name: order_place_limit_order
+  operationId: order-place-limit-order
+  method: POST
+  path: /v2.1/order/limit
+  description: 지정가 매매 주문
+- name: order_reward_history
+  operationId: order-reward-history
+  method: POST
+  path: /v2.1/event/order-reward/history
+  description: 주문 리워드 내역 조회
+- name: order_reward_programs
+  operationId: order-reward-programs
+  method: POST
+  path: /v2.1/event/order-reward/programs
+  description: 주문 리워드 종목 정보 조회
+- name: place_order
+  operationId: place-order
+  method: POST
+  path: /v2.1/order
+  description: 매수/매도 주문
+- name: single_coin_transaction_history
+  operationId: single-coin-transaction-history
+  method: POST
+  path: /v2.1/transaction/coin/history/detail
+  description: 가상자산 입출금 내역 단건 조회
+- name: virtual_asset_deposit_address
+  operationId: virtual-asset-deposit-address
+  method: POST
+  path: /v2.1/account/deposit_address
+  description: 가상자산 입금 주소 조회

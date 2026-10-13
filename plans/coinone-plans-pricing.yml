@@ -1,0 +1,21 @@
+name: Coinone Open API Trading Fees
+generated: '2026-10-13'
+method: searched
+source: https://docs.coinone.co.kr/docs/api-거래-수수료율-안내
+plans:
+- name: Open API fee-free promotion
+  price: 0
+  price_text: Maker 0%/Taker 0%
+  description: 2026년 8월 21일 00시부터 별도 안내 시까지 (personal API keys only)
+  features:
+  - Open API 거래 수수료 무료
+  limits:
+  - Excludes 거래유의 및 거래지원 종료 예정 종목
+  - Excludes partner/external-service and AI grid trades
+- name: Open API default fee
+  price: 0.02
+  price_text: Maker/Taker 0.02%
+  description: 2025년 1월 2일 변경 적용
+  features:
+  - Open API 수수료 인하
+  limits: []
